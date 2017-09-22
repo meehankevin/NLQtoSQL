@@ -85,8 +85,9 @@ NLQ_entry = ttk.Entry(mainframe, textvariable=NLQsource, width=50)
 NLQ_entry.grid(column=1, row=0, sticky=(W, E))
 
 ttk.Label(mainframe, text="Please insert path/to/datafile/csv:").grid(column=0, row=1)
-NLQ_entry = ttk.Entry(mainframe, textvariable=datasource)
-NLQ_entry.grid(column=1, row=1, sticky=(W, E))
+datasource_entry = ttk.Entry(mainframe, textvariable=datasource)
+datasource_entry.insert(END, "data/cwurData.csv")
+datasource_entry.grid(column=1, row=1, sticky=(W, E))
 
 ttk.Button(mainframe, text="Convert", command=compute).grid(row=2, columnspan=2)
 
